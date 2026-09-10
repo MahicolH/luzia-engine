@@ -1,0 +1,17 @@
+{
+  "name": "luzia-engine",
+  "version": "1.0.0",
+  "description": "Motor de IA especializado en energía eléctrica y contratos energéticos para LuzIA",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "undici": "^7.16.0"
+  }
+}

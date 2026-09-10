@@ -1,0 +1,13 @@
+### Buscar conocimiento de tarifas
+GET http://localhost:3000/knowledge/search?q=tarifa%20Repsol%20electricidad%20permanencia
+
+### Metadata de conocimiento
+GET http://localhost:3000/knowledge/meta
+
+### Chat usando automáticamente el Knowledge Engine
+POST http://localhost:3000/chat
+Content-Type: application/json
+
+{
+  "message": "¿Qué tarifas de electricidad de Repsol aparecen en la base de conocimiento y qué permanencia tienen?"
+}

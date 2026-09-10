@@ -1,0 +1,33 @@
+### Health
+GET http://localhost:3000/health
+
+### Catalog
+GET http://localhost:3000/tariffs/catalog?q=Repsol electricidad&company=Repsol&limit=5
+
+### Basic deterministic calculation
+POST http://localhost:3000/tariffs/calculate
+Content-Type: application/json
+
+{
+  "kwh": 350,
+  "energyPrice": 0.1299,
+  "powerKwP1": 4.6,
+  "powerKwP2": 4.6,
+  "powerPriceP1PerKwDay": 0.09013,
+  "powerPriceP2PerKwDay": 0.09013,
+  "days": 30
+}
+
+### Full bill estimate - replace tariffId with a real catalog id if needed
+POST http://localhost:3000/tariffs/estimate
+Content-Type: application/json
+
+{
+  "tariffId": "repsol-electricidad-6",
+  "kwh": 350,
+  "powerKwP1": 4.6,
+  "powerKwP2": 4.6,
+  "days": 30,
+  "useDiscountedPrices": true,
+  "includePower": true
+}

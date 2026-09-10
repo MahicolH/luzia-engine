@@ -1,0 +1,23 @@
+### Perfil y recomendación
+POST http://localhost:3000/profile/recommend
+Content-Type: application/json
+
+{
+  "consumptionKwh": 350,
+  "powerKw": 4.6,
+  "days": 30,
+  "customerType": "hogar",
+  "schedule": "noche",
+  "noPermanence": true,
+  "renewable": true,
+  "company": "Repsol",
+  "limit": 5
+}
+
+### Recomendación por chat
+POST http://localhost:3000/chat
+Content-Type: application/json
+
+{
+  "message": "Tengo 350 kWh al mes y 4,6 kW. Quiero una tarifa para mi hogar, consumo bastante de noche, quiero evitar permanencia y me interesa la energía renovable. ¿Cuál me recomiendas?"
+}

@@ -1,0 +1,32 @@
+### Comparar Repsol con consumo mensual
+POST http://localhost:3000/tariffs/compare
+Content-Type: application/json
+
+{
+  "query": "tarifas electricidad Repsol",
+  "company": "Repsol",
+  "kwh": 350,
+  "powerKw": 4.6,
+  "days": 30,
+  "limit": 5
+}
+
+### Comparar varias comercializadoras
+POST http://localhost:3000/tariffs/compare
+Content-Type: application/json
+
+{
+  "query": "tarifas electricidad",
+  "kwh": 350,
+  "powerKw": 4.6,
+  "days": 30,
+  "limit": 8
+}
+
+### Chat: comparación inteligente
+POST http://localhost:3000/chat
+Content-Type: application/json
+
+{
+  "message": "Tengo 350 kWh al mes y 4,6 kW. Compara las tarifas de Repsol y dime cuál me conviene más."
+}

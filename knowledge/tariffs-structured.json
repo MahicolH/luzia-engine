@@ -1,0 +1,2250 @@
+{
+  "knowledgeVersion": "0.6.0",
+  "source": "PRECIOS AGOSTO (1).xlsx",
+  "generatedAt": "2026-09-01T23:41:32.148867+00:00",
+  "description": "Catalogo estructurado de tarifas y servicios. Precios expresados en unidades del documento fuente; verificar vigencia antes de contratar.",
+  "electricityTariffs": [
+    {
+      "id": "iberdrola-electricidad-6",
+      "company": "Iberdrola",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "Plan Exclusivo FIJO 1P",
+      "planCode": "Luz 2.0TD",
+      "energyPrices": {
+        "base": 0.205765
+      },
+      "discountedEnergyPrices": {
+        "base": 0.16461
+      },
+      "powerPrices": {
+        "P1": 0.120521,
+        "P2": 0.071205
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": "15% Dto en termino de energia y en el termino de potencia + 5% por contratar mantenimiento",
+      "region": "Solo habilitado para CATALUÑA",
+      "segment": "Residencial y PYME pequeña / Hasta 15KW",
+      "maxPowerKw": 15.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,205765 €/kWh",
+        "power": "P1 0,120521 €/Kw día\nP2 0,071205 €/Kw día",
+        "discountedEnergy": "Con mante: 0,16461 €/kWh\nSin mante: 0,17490 €/kWh",
+        "permanence": "Si (12 meses)"
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 6,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-electricidad-7",
+      "company": "Iberdrola",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "Plan Exclusivo FIJO 3P",
+      "planCode": "Luz 2.0TD",
+      "energyPrices": {
+        "punta": 0.25,
+        "llano": 0.2088,
+        "valle": 0.1811
+      },
+      "discountedEnergyPrices": {
+        "punta": 0.2125,
+        "llano": 0.17748,
+        "valle": 0.153935
+      },
+      "powerPrices": {
+        "P1": 0.120521,
+        "P2": 0.071205
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": "15% Dto en termino de energia y en el termino de potencia + 5% por contratar mantenimiento",
+      "region": "Solo habilitado para CATALUÑA",
+      "segment": "Residencial y PYME pequeña / Hasta 15KW",
+      "maxPowerKw": 15.0,
+      "permanence": {
+        "status": "optional",
+        "monthsRange": [
+          0,
+          12
+        ]
+      },
+      "notes": null,
+      "raw": {
+        "energy": "Punta: 0,250000 €/kWh\nLlano: 0,208800 €/kWh\nValle: 0,181100 €/kWh",
+        "power": "P1 0,120521 €/Kw día\nP2 0,071205 €/Kw día",
+        "discountedEnergy": "Con mantenimiento:\nPunta: 0,200000 €/kWh\nLlano: 0,167040 €/kWh\nValle: 0,144880 €/kWh\n\nSin mantenimiento:\nPunta: 0,212500 €/kWh \nLlano: 0,177480 €/kWh\nValle: 0,153935 €/kWh",
+        "permanence": "Opcional (0 a 12 meses)"
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 7,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-electricidad-8",
+      "company": "Iberdrola",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "Plan Impulsa 24H",
+      "planCode": "Luz 2.0TD",
+      "energyPrices": {
+        "base": 0.1732
+      },
+      "discountedEnergyPrices": {
+        "base": 0.1299
+      },
+      "powerPrices": {
+        "P1": 0.12463,
+        "P2": 0.062986
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": "20% Dto en el termino de energia + 5% por contratar mantenimeinto",
+      "region": "Solo habilitado para CATALUÑA",
+      "segment": "Residencial y PYME pequeña / <15KW",
+      "maxPowerKw": 15.0,
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,173200 €/kWh",
+        "power": "P1 0,124630 €/Kw día\nP2 0,062986 €/Kw día",
+        "discountedEnergy": "Con mante: 0,1299 €/kWh\nSin mante: 0,13856 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 8,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-electricidad-9",
+      "company": "Iberdrola",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "Plan Volver",
+      "planCode": "Luz 2.0TD",
+      "energyPrices": {
+        "base": 0.199998
+      },
+      "discountedEnergyPrices": {
+        "base": 0.08999
+      },
+      "powerPrices": {
+        "P1": 0.098603,
+        "P2": 0.098603
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": "50% Dto unicamente en días vacacionales (durante todo el verano, Navidad y Semana Santa y fines de semana + 5% por contratar mantenimiento)",
+      "region": "Solo habilitado para CATALUÑA",
+      "segment": "Residencial, enfoque principal segundas viviendas / <15KW",
+      "maxPowerKw": 15.0,
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,199998 €/kWh",
+        "power": "P1 0,098603 €/Kw día\nP2 0,098603 €/Kw día",
+        "discountedEnergy": "Con mante: 0,08999 €/kWh\nSin mante: 0,09999 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 9,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-electricidad-10",
+      "company": "Iberdrola",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "Plan OMIE Obras",
+      "planCode": "Luz 2.0TD",
+      "energyPrices": {
+        "base": 0.04
+      },
+      "discountedEnergyPrices": {
+        "base": 0.04
+      },
+      "powerPrices": {
+        "P1": 0.075903,
+        "P2": 0.001987
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": "Sin descuento (únicamente para suministros de obra)",
+      "region": "Solo habilitado para CATALUÑA",
+      "segment": "PYME",
+      "maxPowerKw": null,
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,040000 €/kWh",
+        "power": "P1 0,075903 €/Kw día\nP2 0,001987 €/Kw día",
+        "discountedEnergy": "0,040000 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 10,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-electricidad-11",
+      "company": "Iberdrola",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "Plan OMIE Comunidades",
+      "planCode": "Luz 2.0TD",
+      "energyPrices": {
+        "base": 0.03
+      },
+      "discountedEnergyPrices": {
+        "base": 0.03
+      },
+      "powerPrices": {
+        "P1": 0.075903,
+        "P2": 0.001987
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": "Sin descuento",
+      "region": "Solo habilitado para CATALUÑA",
+      "segment": "PYME",
+      "maxPowerKw": null,
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,030000 €/kWh",
+        "power": "P1 0,075903 €/Kw día\nP2 0,001987 €/Kw día",
+        "discountedEnergy": "0,030000 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 11,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-electricidad_3_0td-48",
+      "company": "Iberdrola",
+      "type": "electricity",
+      "category": "electricidad_3_0td",
+      "name": "Plan Impulsa 24H +",
+      "planCode": "Luz 3.0TD",
+      "energyPrices": {
+        "base": 0.187
+      },
+      "discountedEnergyPrices": {
+        "base": 0.1402
+      },
+      "powerPrices": {
+        "P1": 21.797514,
+        "P2": 11.870515,
+        "P3": 7.1523,
+        "P4": 6.598084,
+        "P5": 6.458986,
+        "P6": 5.757407
+      },
+      "powerPriceUnit": "eur_per_kw_year",
+      "discounts": "20% 1º año Y 10%  2º año En el termino de energia + 5% por contratar mantenimeinto",
+      "region": "Solo habilitado para CATALUÑA",
+      "segment": "Residencial y PYME >15kw",
+      "maxPowerKw": null,
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,187 €/kWh",
+        "power": "P1: 21,797514\nP2: 11,870515\nP3: 7,152300\nP4: 6,598084\nP5: 6,458986\nP6: 5,757407",
+        "discountedEnergy": "0,1402 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 48,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-electricidad_3_0td-49",
+      "company": "Iberdrola",
+      "type": "electricity",
+      "category": "electricidad_3_0td",
+      "name": "Plan Exclusivo",
+      "planCode": "Luz 3.0TD",
+      "energyPrices": {
+        "punta": 0.300532,
+        "llano": 0.270768,
+        "valle": 0.241722,
+        "p4": 0.225572,
+        "p5": 0.188347,
+        "p6": 0.199186
+      },
+      "discountedEnergyPrices": {
+        "punta": 0.255452,
+        "llano": 0.230153,
+        "valle": 0.205464,
+        "p4": 0.191736,
+        "p5": 0.160095,
+        "p6": 0.169308
+      },
+      "powerPrices": {
+        "P1": 24.491635,
+        "P2": 12.696152,
+        "P3": 9.504408,
+        "P4": 7.034486,
+        "P5": 5.370416,
+        "P6": 3.989853
+      },
+      "powerPriceUnit": "eur_per_kw_year",
+      "discounts": "15% En termino de energia y en el termino de potencia",
+      "region": "Solo habilitado para CATALUÑA",
+      "segment": "Residencial y PYME >15kw",
+      "maxPowerKw": null,
+      "permanence": {
+        "status": "optional",
+        "monthsRange": [
+          0,
+          12
+        ]
+      },
+      "notes": null,
+      "raw": {
+        "energy": "Punta: 0,300532\nLlano: 0,270768\nValle: 0,241722\nP4: 0,225572\nP5: 0,188347\nP6: 0,199186",
+        "power": "P1: 24,491635\nP2: 12,696152\nP3: 9,504408\nP4: 7,034486\nP5: 5,370416\nP6: 3,989853",
+        "discountedEnergy": "Punta: 0,255452\nLlano: 0,230153\nValle: 0,205464\nP4: 0,191736\nP5: 0,160095\nP6: 0,169308",
+        "permanence": "Opcional (0 a 12 meses)"
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 49,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-electricidad_3_0td-50",
+      "company": "Iberdrola",
+      "type": "electricity",
+      "category": "electricidad_3_0td",
+      "name": "Plan OMIE 0",
+      "planCode": "Luz 3.0TD",
+      "energyPrices": {
+        "base": 0.034
+      },
+      "discountedEnergyPrices": {
+        "base": 0.034
+      },
+      "powerPrices": {
+        "P1": 20.376927,
+        "P2": 10.617621,
+        "P3": 4.481534,
+        "P4": 3.886333,
+        "P5": 2.513851,
+        "P6": 1.442287
+      },
+      "powerPriceUnit": "eur_per_kw_year",
+      "discounts": "Sin descuento (únicamente para suministros de obra)",
+      "region": "Solo habilitado para CATALUÑA",
+      "segment": "PYME >15kw",
+      "maxPowerKw": null,
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,034 €/kWh",
+        "power": "P1: 20,376927\nP2: 10,617621\t\nP3: 4,481534\t\nP4: 3,886333\t\nP5: 2,513851\t\nP6: 1,442287",
+        "discountedEnergy": "0,034 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 50,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-5",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA LUZ M+",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.1299
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.09013,
+        "P2": 0.09013
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": "Incluye 12 meses de Movistar Plus",
+      "raw": {
+        "energy": "0.1299 €/kWh",
+        "power": "P1: 0.09013 €/Kw día\nP2: 0.09013 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 5,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-6",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TRANQUILISIMA 5 AÑOS",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.1399
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.08192,
+        "P2": 0.08192
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": "Mismo precio durante 5 años sin permanencia",
+      "raw": {
+        "energy": "0.1399 €/kWh",
+        "power": "P1: 0.08192 €/Kw día\nP2: 0.08192 €/kW día",
+        "discountedEnergy": null,
+        "permanence": null
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 6,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-7",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA SIN HORARIOS",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.1299
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.09013,
+        "P2": 0.09013
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0.1299 €/kWh",
+        "power": "P1: 0.09013 €/Kw día\nP2: 0.09013 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 7,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-8",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA SIN HORARIOS HOGAR",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.1299
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.09013,
+        "P2": 0.09013
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0.1299 €/kWh",
+        "power": "P1: 0.09013 €/Kw día\nP2: 0.09013 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 8,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-9",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA SIN HORARIOS HOGAR - ASISTENTE 24 HORAS PLUS",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.1099
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.09013,
+        "P2": 0.09013
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0.1099 €/kWh",
+        "power": "P1: 0.09013 €/Kw día\nP2: 0.09013 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 9,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-10",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA SIN HORARIOS",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.1199
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.09013,
+        "P2": 0.09013
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0.1199 €/kWh",
+        "power": "P1: 0.09013 €/Kw día\nP2: 0.09013 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 10,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-11",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA AHORRO POTENCIA HOGAR",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "p1": 0.1799,
+        "p2": 0.1649,
+        "p3": 0.1649
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.08443,
+        "P2": 0.00199
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "energy": "P1: 0,1799 €/kWh\nP2: 0,1649 €/kWh\nP3: 0,1649 €/kWh",
+        "power": "P1: 0,08443 €/Kw día\nP2: 0,00199 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 11,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-12",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA AHORRO POTENCIA HOGAR",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.1649
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.08443,
+        "P2": 0.00199
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,1649 €/kWh",
+        "power": "P1: 0,08443 €/Kw día\nP2: 0,00199 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 12,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-13",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA AHORRO POTENCIA",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.1899
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.08443,
+        "P2": 0.00199
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,1899 €/kWh",
+        "power": "P1: 0,08443 €/Kw día\nP2: 0,00199 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 13,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-14",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA DISCRIMINACION HORARIA",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "p1": 0.1659,
+        "p2": 0.1159,
+        "p3": 0.0969
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.08191,
+        "P2": 0.08191
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "energy": "P1: 0,1659 €/kWh\nP2: 0,1159 €/kWh\nP3: 0,0969 €/kWh",
+        "power": "P1: 0,08191 €/Kw día\nP2: 0,08191 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 14,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-15",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA 2ª RESIDENCIA",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "precio_promo": 0.1049,
+        "precio_no_promo": 0.2099
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.12027,
+        "P2": 0.06
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": "CUANDO ES PRECIO PROMO: \nFines de semana: El descuento se aplica desde el viernes a las 15:00h hasta el domingo a las 00:00h\nVerano: Ahorro activo durante todos los días de la temporada estival (del 21 de junio al 21 de septiembre, ambos inclusive).",
+      "raw": {
+        "energy": "PRECIO PROMO: 0,1049 €/kWh\nPRECIO NO PROMO: 0,2099 €/kWh",
+        "power": "P1: 0,12027 €/Kw día\nP2: 0,06 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 15,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-16",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA 10 HORAS CON DESCUENTO",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "precio_promo": 0.0849,
+        "precio_no_promo": 0.1699
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.09013,
+        "P2": 0.09013
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": "CUANDO ES PRECIO PROMO: 50% de descuento en el precio del consumo de luz (kWh) durante 10 horas diarias consecutivas o alternas, que tú eliges,  Permite modificar las horas seleccionadas hasta 6 veces al año.",
+      "raw": {
+        "energy": "PRECIO PROMO: 0,0849 €/kWh\nPRECIO NO PROMO: 0,1699 €/kWh",
+        "power": "P1: 0.09013 €/Kw día\nP2: 0.09013 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 16,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-electricidad-17",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA AHORRO RENOVABLE",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.1299
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.09013,
+        "P2": 0.09013
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <10Kw",
+      "maxPowerKw": 10.0,
+      "permanence": {
+        "status": "yes",
+        "months": null
+      },
+      "notes": "Te devuelve hasta un 25% de tu consumo en saldo Waylet al concentrar el uso en horas de sol",
+      "raw": {
+        "energy": "0,1299 €/kWh",
+        "power": "P1: 0.09013 €/Kw día\nP2: 0.09013 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "SI"
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 17,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "nordy-electricidad-5",
+      "company": "Nordy",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA L ESTABLE III",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.109
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.109,
+        "P2": 0.109
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <15Kw",
+      "maxPowerKw": 15.0,
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,109 €/kWh",
+        "power": "P1: 0,109 €/Kw día\nP2: 0,109 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "NORDY",
+        "row": 5,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "nordy-electricidad-6",
+      "company": "Nordy",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "TARIFA L FIJA III",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.139
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.079,
+        "P2": 0.079
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico, PYMES y autonomos <15Kw",
+      "maxPowerKw": 15.0,
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,139 €/kWh",
+        "power": "P1: 0,079 €/Kw día\nP2: 0,079 €/kW día",
+        "discountedEnergy": null,
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "NORDY",
+        "row": 6,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "naturgy-electricidad-5",
+      "company": "Naturgy",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "Tarifa Por Uso Luz",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.142449
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.12303,
+        "P2": 0.061562
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico <15Kw",
+      "maxPowerKw": 15.0,
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,142449 €/kWh",
+        "power": "P1: 0,123030\nP2: 0,061562",
+        "discountedEnergy": null,
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "NATURGY",
+        "row": 5,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "naturgy-electricidad-6",
+      "company": "Naturgy",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "Tarifa Plana",
+      "planCode": "2.0TD",
+      "energyPrices": {},
+      "discountedEnergyPrices": {},
+      "powerPrices": {},
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": "Domestico <15Kw",
+      "maxPowerKw": 15.0,
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "energy": "Cuota fija personalizada, basada en el consumo anual estimado del cliente",
+        "power": null,
+        "discountedEnergy": null,
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "NATURGY",
+        "row": 6,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "gana-energ-a-electricidad-5",
+      "company": "Gana Energía",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "Tarifa 24 Horas",
+      "planCode": "2.0TD",
+      "energyPrices": {
+        "base": 0.119
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.089434,
+        "P2": 0.089434
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": null,
+      "maxPowerKw": null,
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "energy": "0,119 €/kWh",
+        "power": "P1: 0,089434 €/Kw día\nP2: 0,089434 €/kW día",
+        "discountedEnergy": null,
+        "permanence": null
+      },
+      "source": {
+        "sheet": "GANA",
+        "row": 5,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "gana-energ-a-electricidad-6",
+      "company": "Gana Energía",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "Tarifa Precio De Mercado (precio de mercado)",
+      "planCode": "2.0TD Y 3.0TD",
+      "energyPrices": {},
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.076,
+        "P2": 0.002
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": null,
+      "maxPowerKw": null,
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": "Tarifa de Luz Precio del mercado:  se debe verificar diariamente los precios:\nhttps://ganaenergia.com/tarifas-luz/precio-mercado",
+      "raw": {
+        "energy": "Valle: A precio de coste\n Llano: A precio de coste\n Punta: A precio de coste",
+        "power": "P1: 0.076 €/Kw día\nP2: 0.002 €/Kw día",
+        "discountedEnergy": null,
+        "permanence": null
+      },
+      "source": {
+        "sheet": "GANA",
+        "row": 6,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": true
+    },
+    {
+      "id": "gana-energ-a-electricidad-7",
+      "company": "Gana Energía",
+      "type": "electricity",
+      "category": "electricidad",
+      "name": "Tarifa Tramos Horarios",
+      "planCode": "2.0TD Y 3.0TD",
+      "energyPrices": {
+        "valle": 0.08,
+        "llano": 0.104,
+        "punta": 0.171
+      },
+      "discountedEnergyPrices": {},
+      "powerPrices": {
+        "P1": 0.089434,
+        "P2": 0.089434
+      },
+      "powerPriceUnit": "eur_per_kw_day",
+      "discounts": null,
+      "region": null,
+      "segment": null,
+      "maxPowerKw": null,
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "energy": "Valle: 0.080 €/kWh\n Llano: 0.104 €/kWh\n Punta: 0.171 €/kWh",
+        "power": "P1: 0.089434 €/Kw día\nP2: 0.089434 €/Kw día",
+        "discountedEnergy": null,
+        "permanence": null
+      },
+      "source": {
+        "sheet": "GANA",
+        "row": 7,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    }
+  ],
+  "gasTariffs": [
+    {
+      "id": "iberdrola-gas-26",
+      "company": "Iberdrola",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL1 EXCLUSIVO",
+      "fixedPrice": 6.55,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.120587
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": "10% Dto  + 5% por contratar mantenimiento en Termino fijo y Termino variable",
+      "raw": {
+        "fixed": "6,55 €/mes",
+        "variable": "0,120587 €/kWh",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 26,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-gas-27",
+      "company": "Iberdrola",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL2 EXCLUSIVO",
+      "fixedPrice": 11.18,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.119244
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": "10% Dto  + 5% por contratar mantenimiento en Termino fijo y Termino variable",
+      "raw": {
+        "fixed": "11,18 €/mes",
+        "variable": "0,119244 €/kWh",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 27,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-gas-28",
+      "company": "Iberdrola",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL3 EXCLUSIVO",
+      "fixedPrice": 21.53,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.119244
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": "10% Dto  + 5% por contratar mantenimiento en Termino fijo y Termino variable",
+      "raw": {
+        "fixed": "21,53 €/mes",
+        "variable": "0,119244 €/kWh",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 28,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-gas-29",
+      "company": "Iberdrola",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL4 A RL6 PRECIO LIGADO A LA OFERTA ACTUAL DEL MERCADO REGULADO (INDEXADO)",
+      "fixedPrice": null,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {},
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "fixed": null,
+        "variable": null,
+        "permanence": null
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 29,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-gas-30",
+      "company": "Iberdrola",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL4 EXCLUSIVO",
+      "fixedPrice": 66.63,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {},
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": "Sin descuento",
+      "raw": {
+        "fixed": "66.63",
+        "variable": "0.015",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 30,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-gas-31",
+      "company": "Iberdrola",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL5 EXCLUSIVO",
+      "fixedPrice": 257.34,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {},
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": "Sin descuento",
+      "raw": {
+        "fixed": "257.34",
+        "variable": "0.015",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 31,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "iberdrola-gas-32",
+      "company": "Iberdrola",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL6 EXCLUSIVO",
+      "fixedPrice": 1142.7,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {},
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": "Sin descuento",
+      "raw": {
+        "fixed": "1142.7",
+        "variable": "0.015",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 32,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-gas-33",
+      "company": "Repsol",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL.1 GAS TAG 12M BV",
+      "fixedPrice": 6.9,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.0699
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "6,9 €/mes",
+        "variable": "0,0699 €/kWh",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 33,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-gas-34",
+      "company": "Repsol",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL.1 GAS 12M MV",
+      "fixedPrice": 6.9,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.0799
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "6,9 €/mes",
+        "variable": "0,0799 €/kWh",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 34,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-gas-35",
+      "company": "Repsol",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL.2 GAS TAG 12M BV",
+      "fixedPrice": 13.9,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.0699
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "13,9 €/mes",
+        "variable": "0,0699 €/kWh",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 35,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-gas-36",
+      "company": "Repsol",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL.2 GAS 12M MV",
+      "fixedPrice": 13.9,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.0799
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "13,9 €/mes",
+        "variable": "0,0799 €/kWh",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 36,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-gas-37",
+      "company": "Repsol",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL.3 GAS TAG 12M BV",
+      "fixedPrice": 22.9,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.0699
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "22,9 €/mes",
+        "variable": "0,0699 €/kWh",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 37,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-gas-38",
+      "company": "Repsol",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL.3 GAS 12M MV",
+      "fixedPrice": 22.9,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.0799
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "22,9 €/mes",
+        "variable": "0,0799 €/kWh",
+        "permanence": null
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 38,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "naturgy-gas-16",
+      "company": "Naturgy",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL 1 Tarifa Por Uso Gas",
+      "fixedPrice": 0.204903,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.077434
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "0,204903 €/mes",
+        "variable": "0,077434 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "NATURGY",
+        "row": 16,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "naturgy-gas-17",
+      "company": "Naturgy",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL 2 Tarifa Por Uso Gas",
+      "fixedPrice": 0.363987,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.077434
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "0,363987 €/mes",
+        "variable": "0,077434 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "NATURGY",
+        "row": 17,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "naturgy-gas-18",
+      "company": "Naturgy",
+      "type": "gas",
+      "category": "gas",
+      "name": "RL 3 Tarifa Por Uso Gas",
+      "fixedPrice": 0.786059,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.077434
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "0,786059 €/mes",
+        "variable": "0,077434 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "NATURGY",
+        "row": 18,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "naturgy-gas-19",
+      "company": "Naturgy",
+      "type": "gas",
+      "category": "gas",
+      "name": "Tarifa Plana Gas",
+      "fixedPrice": null,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {},
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "Cuota fija personalizada, basada en el consumo anual estimado del cliente",
+        "variable": null,
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "NATURGY",
+        "row": 19,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "gana-energ-a-gas-19",
+      "company": "Gana Energía",
+      "type": "gas",
+      "category": "gas",
+      "name": "Tarifa Gas RL1 (precio de coste)",
+      "fixedPrice": 3.93,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.0682
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "3.93 €/mes",
+        "variable": "0.0682 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "GANA",
+        "row": 19,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "gana-energ-a-gas-20",
+      "company": "Gana Energía",
+      "type": "gas",
+      "category": "gas",
+      "name": "Tarifa Gas RL2 (precio de coste)",
+      "fixedPrice": 8.11,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.0661
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "8.11 €/mes",
+        "variable": "0.0661 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "GANA",
+        "row": 20,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "gana-energ-a-gas-21",
+      "company": "Gana Energía",
+      "type": "gas",
+      "category": "gas",
+      "name": "Tarifa Gas RL3 (precio de coste)",
+      "fixedPrice": 18.82,
+      "fixedPriceUnit": "eur_per_month",
+      "variablePrices": {
+        "base": 0.0627
+      },
+      "variablePriceUnit": "eur_per_kwh",
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "notes": null,
+      "raw": {
+        "fixed": "18.82 €/mes",
+        "variable": "0.0627 €/kWh",
+        "permanence": "No"
+      },
+      "source": {
+        "sheet": "GANA",
+        "row": 21,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    }
+  ],
+  "solarTariffs": [
+    {
+      "id": "iberdrola-solar-68",
+      "company": "Iberdrola",
+      "type": "electricity",
+      "category": "solar",
+      "name": "Plan Solar",
+      "planCode": "Luz 2.0TD y 3.0TD",
+      "energyAndExportRaw": "Punta: 0,249800 €/kWh\nValle: 0,124900 €/kWh\nExcedentaria: 0,06",
+      "powerPrices": {
+        "P1": 0.109562,
+        "P2": 0.071205
+      },
+      "promotionHours": "Verano 0,1249 €/kWh: De 18:00 a 09:59\nVerano 0,2498 €/kWh: De 09:59 a 18:00\n\nInvierno 0,1249 €/kWh: De 17:00 a 09:59\nInvierno 0,2498 €/kWh:  De 09:59 a 17:00\n\nPrimavera/Otoño 0,1249€/kWh: De 17:00 a 08:59\nPrimavera/Otoño 0,2498 €/kWh: De 08:59 a 17:00",
+      "promotionSummary": "Verano: 16 horas al dia\nInvierno: 17 horas horas al dia\nPrimavera/Otoño: 16 horas horas al dia",
+      "region": "Solo habilitado para CATALUÑA",
+      "segment": "Residencial y PYME",
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 68,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-solar-22",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "solar",
+      "name": "TARIFA SOLAR",
+      "planCode": "2.0TD",
+      "energyAndExportRaw": "MEDIO",
+      "powerPrices": {},
+      "promotionHours": "P1: 0.09013 €/Kw día\nP2: 0.09013 €/kW día",
+      "promotionSummary": "No aplica",
+      "region": "Se añadirá 0,05 cts/litro por contrato activo, máximo 15cts/litro, es decir 0,05 cts de Wayllet mas 0,05cts por cada contrato hasta un total de 0,15cts/litro",
+      "segment": "NO",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 22,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    },
+    {
+      "id": "repsol-solar-23",
+      "company": "Repsol",
+      "type": "electricity",
+      "category": "solar",
+      "name": "BATERIA VIRTUAL",
+      "planCode": "2.0TD",
+      "energyAndExportRaw": "MEDIO",
+      "powerPrices": {},
+      "promotionHours": "P1: 0.09013 €/Kw día\nP2: 0.09013 €/kW día",
+      "promotionSummary": "1.99 €/mes",
+      "region": "Se añadirá 0,05 cts/litro por contrato activo, máximo 15cts/litro, es decir 0,05 cts de Wayllet mas 0,05cts por cada contrato hasta un total de 0,15cts/litro",
+      "segment": "NO",
+      "permanence": {
+        "status": "unknown",
+        "months": null
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 23,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      },
+      "requiresVerification": false
+    }
+  ],
+  "maintenance": [
+    {
+      "id": "iberdrola-maintenance-electricity-16",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Pack Iberdrola Hogar",
+      "pricePerMonth": 8.95,
+      "priceRaw": "8,95 €/mes",
+      "features": [
+        "Solo clientes domesticos",
+        "3 meses al 50%"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 16,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-electricity-17",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Urgencias Electricas Negocios <15kw",
+      "pricePerMonth": 9.95,
+      "priceRaw": "9,95 €/mes",
+      "features": [
+        "Solo PYMES y autonomos",
+        "2 meses al 50%"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 17,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-electricity-18",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Urgencias Electricas Negocios 15kw - 25Kw",
+      "pricePerMonth": 11.95,
+      "priceRaw": "11,95 €/mes",
+      "features": [
+        "Solo PYMES y autonomos",
+        "2 meses al 50%"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 18,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-electricity-19",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Asistencia Comunidades PPP \n>10Kw",
+      "pricePerMonth": 10.95,
+      "priceRaw": "10,95 €/mes",
+      "features": [
+        "Solo comunidades de propietarios",
+        "2 meses gratis"
+      ],
+      "permanence": {
+        "status": "yes",
+        "months": 12
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 19,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-electricity-20",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Asistencia Comunidades PPP \n10Kw -15kw",
+      "pricePerMonth": 14.95,
+      "priceRaw": "14,95 €/mes",
+      "features": [
+        "Solo comunidades de propietarios",
+        "2 meses gratis"
+      ],
+      "permanence": {
+        "status": "yes",
+        "months": 12
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 20,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-electricity-21",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Asistencia Comunidades PPP >15kw",
+      "pricePerMonth": 18.95,
+      "priceRaw": "18,95 €/mes",
+      "features": [
+        "Solo comunidades de propietarios",
+        "2 meses gratis"
+      ],
+      "permanence": {
+        "status": "yes",
+        "months": 12
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 21,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-gas-37",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "gas",
+      "name": "Pack Mantenimiento Gas",
+      "pricePerMonth": 9.95,
+      "priceRaw": "9,95 €/mes",
+      "features": [
+        "Clientes domesticos, pymes y autonomos",
+        "Sin descuento",
+        "No"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 37,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-electricity-55",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Pack Iberdrola Hogar",
+      "pricePerMonth": 8.95,
+      "priceRaw": "8,95 €/mes",
+      "features": [
+        "Solo clientes domesticos",
+        "3 meses al 50%"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 55,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-electricity-56",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Urgencias Electricas Negocios <15kw",
+      "pricePerMonth": 9.95,
+      "priceRaw": "9,95 €/mes",
+      "features": [
+        "Solo PYMES y autonomos",
+        "2 meses al 50%"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 56,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-electricity-57",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Urgencias Electricas Negocios 15kw - 25Kw",
+      "pricePerMonth": 11.95,
+      "priceRaw": "11,95 €/mes",
+      "features": [
+        "Solo PYMES y autonomos",
+        "2 meses al 50%"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 57,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-electricity-58",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Asistencia Comunidades PPP \n>10Kw",
+      "pricePerMonth": 10.95,
+      "priceRaw": "10,95 €/mes",
+      "features": [
+        "Solo comunidades de propietarios",
+        "2 meses gratis"
+      ],
+      "permanence": {
+        "status": "yes",
+        "months": 12
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 58,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-electricity-59",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Asistencia Comunidades PPP \n10Kw -15kw",
+      "pricePerMonth": 14.95,
+      "priceRaw": "14,95 €/mes",
+      "features": [
+        "Solo comunidades de propietarios",
+        "2 meses gratis"
+      ],
+      "permanence": {
+        "status": "yes",
+        "months": 12
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 59,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-electricity-60",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Asistencia Comunidades PPP >15kw",
+      "pricePerMonth": 18.95,
+      "priceRaw": "18,95 €/mes",
+      "features": [
+        "Solo comunidades de propietarios",
+        "2 meses gratis"
+      ],
+      "permanence": {
+        "status": "yes",
+        "months": 12
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 60,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "iberdrola-maintenance-solar-74",
+      "company": "Iberdrola",
+      "type": "maintenance",
+      "category": "solar",
+      "name": "I+Pack Solar Tercero",
+      "pricePerMonth": 8.95,
+      "priceRaw": "8,95 €/mes",
+      "features": [
+        "Solo clientes domesticos y Pymes",
+        "2 meses gratis"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "IBERDROLA",
+        "row": 74,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "repsol-maintenance-electricity-28",
+      "company": "Repsol",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "ASISTENTE 24 H PLUS",
+      "pricePerMonth": 6.99,
+      "priceRaw": "6.99 €/mes",
+      "features": [
+        "Clientes domesticos, pymes y autonomos",
+        "TODAS LAS TARIFAS QUE INLCUYAN EL MANTENIMIENTO (SVA) SIENDO DE ALTO VALOR O DE VALOR MEDIO, EL CLIENTE RECIBE 20€ DE SALDO EN WAYLET (EXCEPTO LA TARIFA LUZ M+)"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 28,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "repsol-maintenance-gas-43",
+      "company": "Repsol",
+      "type": "maintenance",
+      "category": "gas",
+      "name": "TU ASISTENTE GAS",
+      "pricePerMonth": 10.99,
+      "priceRaw": "10.99 €/mes",
+      "features": [
+        "Domestico, PYMES y autonomos <15Kw"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "REPSOL",
+        "row": 43,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "naturgy-maintenance-electricity-11",
+      "company": "Naturgy",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Servielectric Xpress Piezas",
+      "pricePerMonth": 9.81,
+      "priceRaw": "9,81 €/mes",
+      "features": [
+        "Solo clientes domesticos",
+        "15% dto durante un año sobre el PVP de los servicios"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "NATURGY",
+        "row": 11,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "naturgy-maintenance-gas-24",
+      "company": "Naturgy",
+      "type": "maintenance",
+      "category": "gas",
+      "name": "Servigas Complet",
+      "pricePerMonth": 14.29,
+      "priceRaw": "14,29 €/mes",
+      "features": [
+        "Solo clientes domesticos",
+        "15% dto durante un año sobre el PVP de los servicios"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "NATURGY",
+        "row": 24,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "gana-energ-a-maintenance-electricity-13",
+      "company": "Gana Energía",
+      "type": "maintenance",
+      "category": "electricity",
+      "name": "Tu asistente 24 horas Luz",
+      "pricePerMonth": 4.12,
+      "priceRaw": "4,12 €/mes",
+      "features": [
+        "Clientes domesticos, pymes y autonomos"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "GANA",
+        "row": 13,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    },
+    {
+      "id": "gana-energ-a-maintenance-gas-26",
+      "company": "Gana Energía",
+      "type": "maintenance",
+      "category": "gas",
+      "name": "Tu asistente Gas",
+      "pricePerMonth": 9.08,
+      "priceRaw": "9,08 €/mes",
+      "features": [
+        "Clientes domesticos, pymes y autonomos"
+      ],
+      "permanence": {
+        "status": "no",
+        "months": 0
+      },
+      "source": {
+        "sheet": "GANA",
+        "row": 26,
+        "file": "PRECIOS AGOSTO (1).xlsx"
+      }
+    }
+  ]
+}

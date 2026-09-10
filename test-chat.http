@@ -1,0 +1,11 @@
+### Health
+GET http://localhost:3000/health
+
+### Chat
+POST http://localhost:3000/chat
+Content-Type: application/json
+X-API-Key: cambia-esta-clave
+
+{
+  "message": "Explícame qué información necesitas para analizar una tarifa de electricidad."
+}
