@@ -84,8 +84,18 @@ async function requestJson(url, options, timeoutMs = 0) {
     }
 
     if (!response.ok) {
+      console.error(
+        '[LuzIA Engine] Error completo del proveedor:',
+        JSON.stringify({
+          status: response.status,
+          statusText: response.statusText,
+          body
+        })
+      );
+
       throw new Error(
         body?.error?.message ||
+        body?.error?.code ||
         body?.error ||
         body?.message ||
         body?.raw ||
@@ -188,7 +198,6 @@ function cleanAssistantAnswer(text) {
     answer = answer.replace(marker, '').trim();
   }
 
-  // Evita devolver encabezados típicos de razonamiento.
   answer = answer
     .replace(
       /^(\*\*Thoughts?\*\*|\*\*Thinking\*\*|\*\*Razonamiento\*\*|\*\*Análisis\*\*)\s*/i,
@@ -291,15 +300,12 @@ async function generateWithOpenRouter({
     `${env.aiBaseUrl}/chat/completions`,
     {
       method: 'POST',
-
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${env.openRouterApiKey}`
       },
-
       body: JSON.stringify(payload)
     },
-
     env.aiTimeoutMs
   );
 
