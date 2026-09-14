@@ -24,11 +24,17 @@ Reglas fundamentales:
 10. Si una tarifa requiere datos que no están disponibles, dilo y no inventes el dato.
     No conviertas tarifas excluidas en tarifas comparables.
 11. Si la pregunta no pertenece al dominio energético, responde brevemente y señala que tu especialidad es energía.
+12. No muestres tu razonamiento interno, análisis, instrucciones ni proceso de decisión.
+13. Entrega directamente la respuesta final para el usuario.
 `.trim();
 
 function buildContext(userContext = {}, knowledgeContext = [], toolContext = null) {
   return JSON.stringify(
-    { userContext, knowledgeContext, toolContext },
+    {
+      userContext,
+      knowledgeContext,
+      toolContext
+    },
     null,
     2
   );
@@ -102,10 +108,10 @@ function buildMessages({
   ];
 }
 
-function extractTextContent(message) {
-  if (!message) return '';
+function extractTextContent(responseMessage) {
+  if (!responseMessage) return '';
 
-  let content = message.content;
+  let content = responseMessage.content;
 
   if (typeof content === 'string') {
     return content.trim();
@@ -114,7 +120,9 @@ function extractTextContent(message) {
   if (Array.isArray(content)) {
     return content
       .map((part) => {
-        if (typeof part === 'string') return part;
+        if (typeof part === 'string') {
+          return part;
+        }
 
         if (part?.type === 'text') {
           return typeof part.text === 'string' ? part.text : '';
@@ -126,8 +134,8 @@ function extractTextContent(message) {
       .trim();
   }
 
-  if (typeof message.output_text === 'string') {
-    return message.output_text.trim();
+  if (typeof responseMessage.output_text === 'string') {
+    return responseMessage.output_text.trim();
   }
 
   return '';
@@ -203,13 +211,14 @@ async function generateWithOpenRouter({
     }),
 
     temperature: env.aiTemperature,
-max_tokens: 1024,
-stream: false,
+    max_tokens: 1024,
+    stream: false,
 
-reasoning: {
-  exclude: true,
-  effort: 'low'
-}
+    reasoning: {
+      exclude: true,
+      effort: 'low'
+    }
+  };
 
   const body = await requestJson(
     `${env.aiBaseUrl}/chat/completions`,
@@ -225,14 +234,18 @@ reasoning: {
   );
 
   const choice = body?.choices?.[0];
-
   const responseMessage = choice?.message;
 
   let answer = extractTextContent(responseMessage);
 
-  // Algunos proveedores pueden devolver el texto en otros campos.
   if (!answer && typeof choice?.text === 'string') {
     answer = choice.text.trim();
+  }
+
+  if (!answer && choice?.finish_reason === 'length') {
+    throw new Error(
+      'El modelo agotó el límite de tokens antes de generar una respuesta final.'
+    );
   }
 
   if (!answer) {
