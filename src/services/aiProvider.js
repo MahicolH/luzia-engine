@@ -275,11 +275,11 @@ async function generateWithOpenRouter({
     );
   }
 
+  // OpenRouter permite hasta 3 modelos en el fallback.
   const fallbackModels = [
     env.aiModel,
     'nvidia/nemotron-3.5-lightning:free',
-    'inclusionai/ling-3.0-flash-fin:free',
-    'openrouter/free'
+    'inclusionai/ling-3.0-flash-fin:free'
   ].filter(
     (model, index, list) =>
       model && list.indexOf(model) === index
