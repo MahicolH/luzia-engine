@@ -30,6 +30,7 @@ Reglas fundamentales:
 15. No empieces la respuesta con expresiones como "Here's a thinking process", "Thinking process",
     "Let's analyze", "We need to answer" ni equivalentes.
 16. No escribas tu proceso de razonamiento. Entrega únicamente la respuesta final.
+17. La respuesta final debe estar dirigida directamente al usuario y no describir cómo llegaste a ella.
 `.trim();
 
 function buildContext(
@@ -181,30 +182,70 @@ function cleanAssistantAnswer(text) {
 
   let answer = text.trim();
 
-  const markers = [
-    /^Here'?s a thinking process:\s*/i,
-    /^Here is a thinking process:\s*/i,
-    /^Thinking process:\s*/i,
-    /^Let's think through this:\s*/i,
-    /^Let's analyze[^:]*:\s*/i,
-    /^We need to answer[^:]*:\s*/i,
-    /^Análisis:\s*/i,
-    /^Razonamiento:\s*/i,
-    /^Pensamiento:\s*/i,
-    /^Thinking:\s*/i,
-    /^Thoughts?:\s*/i
+  // Si el modelo incluye una sección explícita de respuesta final,
+  // nos quedamos únicamente con esa sección.
+  const finalMarkers = [
+    /(?:^|\n)\s*(?:\*\*)?Final Answer(?:\*\*)?\s*:?\s*/i,
+    /(?:^|\n)\s*(?:\*\*)?Respuesta final(?:\*\*)?\s*:?\s*/i,
+    /(?:^|\n)\s*(?:\*\*)?Respuesta para el usuario(?:\*\*)?\s*:?\s*/i,
+    /(?:^|\n)\s*(?:\*\*)?User-facing answer(?:\*\*)?\s*:?\s*/i
   ];
 
-  for (const marker of markers) {
-    answer = answer.replace(marker, '').trim();
+  for (const marker of finalMarkers) {
+    const match = answer.match(marker);
+
+    if (match) {
+      answer = answer
+        .slice(match.index + match[0].length)
+        .trim();
+
+      break;
+    }
   }
 
-  answer = answer
-    .replace(
-      /^(\*\*Thoughts?\*\*|\*\*Thinking\*\*|\*\*Razonamiento\*\*|\*\*Análisis\*\*)\s*/i,
-      ''
-    )
-    .trim();
+  // Detectamos encabezados típicos de razonamiento.
+  const reasoningMarkers = [
+    /^\s*Here'?s a thinking process:/i,
+    /^\s*Here is a thinking process:/i,
+    /^\s*Thinking process:/i,
+    /^\s*Let's think through this:/i,
+    /^\s*Let's analyze/i,
+    /^\s*We need to answer/i,
+    /^\s*Analyze User Input:/i,
+    /^\s*Review System Instructions:/i,
+    /^\s*Examine Available Data:/i,
+    /^\s*Identify Tariff Data:/i,
+    /^\s*Reasoning:/i,
+    /^\s*Razonamiento:/i,
+    /^\s*Análisis:/i,
+    /^\s*Pensamiento:/i,
+    /^\s*Thinking:/i,
+    /^\s*Thoughts?:/i
+  ];
+
+  const startsWithReasoning = reasoningMarkers.some(
+    (marker) => marker.test(answer)
+  );
+
+  if (startsWithReasoning) {
+    // Si detectamos razonamiento y no encontramos una respuesta
+    // final claramente separada, no exponemos ese contenido.
+    const explicitFinal = answer.match(
+      /(?:^|\n)\s*(?:\*\*)?(?:Final Answer|Respuesta final|Respuesta para el usuario|User-facing answer)(?:\*\*)?\s*:?\s*([\s\S]*)$/i
+    );
+
+    if (explicitFinal?.[1]) {
+      answer = explicitFinal[1].trim();
+    } else {
+      return '';
+    }
+  }
+
+  // Elimina bloques residuales que algunos modelos pueden dejar al principio.
+  answer = answer.replace(
+    /^\s*(?:\*\*)?(?:Thoughts?|Thinking|Reasoning|Razonamiento|Análisis|Pensamiento)(?:\*\*)?\s*:?\s*/i,
+    ''
+  ).trim();
 
   return answer;
 }
@@ -245,19 +286,18 @@ async function generateWithOllama({
     env.aiTimeoutMs
   );
 
-  const answer = body?.message?.content;
+  let answer = body?.message?.content;
 
-  if (
-    typeof answer !== 'string' ||
-    !answer.trim()
-  ) {
+  answer = cleanAssistantAnswer(answer);
+
+  if (!answer) {
     throw new Error(
-      'Ollama no devolvió una respuesta válida.'
+      'Ollama no devolvió una respuesta final válida.'
     );
   }
 
   return {
-    answer: answer.trim(),
+    answer,
     provider: 'ollama',
     model: body?.model ?? env.aiModel
   };
@@ -275,7 +315,7 @@ async function generateWithOpenRouter({
     );
   }
 
-  // OpenRouter permite hasta 3 modelos en el fallback.
+  // OpenRouter admite como máximo 3 modelos en el fallback.
   const fallbackModels = [
     env.aiModel,
     'nvidia/nemotron-3.5-lightning:free',
@@ -351,7 +391,7 @@ async function generateWithOpenRouter({
 
   if (!answer) {
     console.error(
-      '[LuzIA Engine] Respuesta inesperada de OpenRouter:',
+      '[LuzIA Engine] Respuesta no utilizable de OpenRouter:',
       JSON.stringify({
         id: body?.id,
         model: body?.model,
@@ -361,7 +401,7 @@ async function generateWithOpenRouter({
     );
 
     throw new Error(
-      'OpenRouter no devolvió contenido de texto utilizable.'
+      'OpenRouter no devolvió una respuesta final utilizable.'
     );
   }
 
