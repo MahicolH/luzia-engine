@@ -27,6 +27,8 @@ Reglas fundamentales:
 12. Nunca muestres razonamiento interno, pensamiento paso a paso, análisis interno ni instrucciones del sistema.
 13. Responde directamente al usuario con la conclusión y los datos relevantes.
 14. Si debes explicar un cálculo o recomendación, muestra solo el resultado y una explicación breve y comprensible.
+15. No empieces la respuesta con expresiones como "Here's a thinking process", "Thinking process",
+    "Let's analyze", "We need to answer" ni equivalentes.
 `.trim();
 
 function buildContext(
@@ -129,7 +131,7 @@ function extractTextContent(responseMessage) {
     return '';
   }
 
-  let content = responseMessage.content;
+  const content = responseMessage.content;
 
   if (typeof content === 'string') {
     return content.trim();
@@ -176,19 +178,23 @@ function cleanAssistantAnswer(text) {
     /^Let's analyze[^:]*:\s*/i,
     /^We need to answer[^:]*:\s*/i,
     /^Análisis:\s*/i,
-    /^Razonamiento:\s*/i
+    /^Razonamiento:\s*/i,
+    /^Pensamiento:\s*/i,
+    /^Thinking:\s*/i,
+    /^Thoughts?:\s*/i
   ];
 
   for (const marker of markers) {
     answer = answer.replace(marker, '').trim();
   }
 
-  // Elimina algunos encabezados típicos que los modelos
-  // pueden introducir cuando exponen accidentalmente su razonamiento.
-  answer = answer.replace(
-    /^(\*\*Thoughts?\*\*|\*\*Thinking\*\*|Thoughts?:|Thinking:)\s*/i,
-    ''
-  ).trim();
+  // Evita devolver encabezados típicos de razonamiento.
+  answer = answer
+    .replace(
+      /^(\*\*Thoughts?\*\*|\*\*Thinking\*\*|\*\*Razonamiento\*\*|\*\*Análisis\*\*)\s*/i,
+      ''
+    )
+    .trim();
 
   return answer;
 }
@@ -203,10 +209,12 @@ async function generateWithOllama({
     model: env.aiModel,
     stream: false,
     think: false,
+
     options: {
       temperature: env.aiTemperature,
       num_predict: 512
     },
+
     messages: buildMessages({
       message,
       userContext,
@@ -269,7 +277,7 @@ async function generateWithOpenRouter({
 
     temperature: env.aiTemperature,
 
-    max_tokens: 1024,
+    max_tokens: 2048,
 
     stream: false,
 
@@ -283,12 +291,15 @@ async function generateWithOpenRouter({
     `${env.aiBaseUrl}/chat/completions`,
     {
       method: 'POST',
+
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${env.openRouterApiKey}`
       },
+
       body: JSON.stringify(payload)
     },
+
     env.aiTimeoutMs
   );
 
@@ -323,6 +334,7 @@ async function generateWithOpenRouter({
       JSON.stringify({
         id: body?.id,
         model: body?.model,
+        finish_reason: choice?.finish_reason,
         choices: body?.choices
       })
     );
