@@ -180,11 +180,10 @@ async function generateWithOpenRouter({
     env.aiTimeoutMs
   );
 
-  const choice = body?.choices?.[0];
-const message = choice?.message;
+const choice = body?.choices?.[0];
+const responseMessage = choice?.message;
 
-let answer = message?.content;
-
+let answer = responseMessage?.content;
 if (Array.isArray(answer)) {
   answer = answer
     .map((part) => {
