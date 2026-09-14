@@ -203,14 +203,13 @@ async function generateWithOpenRouter({
     }),
 
     temperature: env.aiTemperature,
-    max_tokens: 512,
-    stream: false,
+max_tokens: 1024,
+stream: false,
 
-    // Evita devolver el razonamiento al cliente.
-    reasoning: {
-      exclude: true
-    }
-  };
+reasoning: {
+  exclude: true,
+  effort: 'low'
+}
 
   const body = await requestJson(
     `${env.aiBaseUrl}/chat/completions`,
