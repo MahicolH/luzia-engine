@@ -42,6 +42,7 @@ const dispatcher = new Agent({
 
 async function requestJson(url, options, timeoutMs = 0) {
   const controller = new AbortController();
+
   const timer =
     timeoutMs > 0
       ? setTimeout(() => controller.abort(), timeoutMs)
@@ -57,6 +58,7 @@ async function requestJson(url, options, timeoutMs = 0) {
     const text = await response.text();
 
     let body;
+
     try {
       body = JSON.parse(text);
     } catch {
@@ -79,7 +81,12 @@ async function requestJson(url, options, timeoutMs = 0) {
   }
 }
 
-function buildMessages({ message, userContext, knowledgeContext, toolContext }) {
+function buildMessages({
+  message,
+  userContext,
+  knowledgeContext,
+  toolContext
+}) {
   return [
     {
       role: 'system',
@@ -93,6 +100,37 @@ function buildMessages({ message, userContext, knowledgeContext, toolContext }) 
         buildContext(userContext, knowledgeContext, toolContext)
     }
   ];
+}
+
+function extractTextContent(message) {
+  if (!message) return '';
+
+  let content = message.content;
+
+  if (typeof content === 'string') {
+    return content.trim();
+  }
+
+  if (Array.isArray(content)) {
+    return content
+      .map((part) => {
+        if (typeof part === 'string') return part;
+
+        if (part?.type === 'text') {
+          return typeof part.text === 'string' ? part.text : '';
+        }
+
+        return '';
+      })
+      .join('')
+      .trim();
+  }
+
+  if (typeof message.output_text === 'string') {
+    return message.output_text.trim();
+  }
+
+  return '';
 }
 
 async function generateWithOllama({
@@ -156,15 +194,22 @@ async function generateWithOpenRouter({
 
   const payload = {
     model: env.aiModel,
+
     messages: buildMessages({
       message,
       userContext,
       knowledgeContext,
       toolContext
     }),
+
     temperature: env.aiTemperature,
     max_tokens: 512,
-    stream: false
+    stream: false,
+
+    // Evita devolver el razonamiento al cliente.
+    reasoning: {
+      exclude: true
+    }
   };
 
   const body = await requestJson(
@@ -180,33 +225,34 @@ async function generateWithOpenRouter({
     env.aiTimeoutMs
   );
 
-const choice = body?.choices?.[0];
-const responseMessage = choice?.message;
+  const choice = body?.choices?.[0];
 
-let answer = responseMessage?.content;
-if (Array.isArray(answer)) {
-  answer = answer
-    .map((part) => {
-      if (typeof part === 'string') return part;
-      if (part?.type === 'text') return part.text ?? '';
-      return '';
-    })
-    .join('');
-}
+  const responseMessage = choice?.message;
 
-if (typeof answer !== 'string' || !answer.trim()) {
-  console.error(
-    '[LuzIA Engine] Respuesta inesperada de OpenRouter:',
-    JSON.stringify(body)
-  );
+  let answer = extractTextContent(responseMessage);
 
-  throw new Error(
-    'OpenRouter no devolvió contenido de texto utilizable.'
-  );
-}
+  // Algunos proveedores pueden devolver el texto en otros campos.
+  if (!answer && typeof choice?.text === 'string') {
+    answer = choice.text.trim();
+  }
+
+  if (!answer) {
+    console.error(
+      '[LuzIA Engine] Respuesta inesperada de OpenRouter:',
+      JSON.stringify({
+        id: body?.id,
+        model: body?.model,
+        choices: body?.choices
+      })
+    );
+
+    throw new Error(
+      'OpenRouter no devolvió contenido de texto utilizable.'
+    );
+  }
 
   return {
-    answer: answer.trim(),
+    answer,
     provider: 'openrouter',
     model: body?.model ?? env.aiModel
   };
