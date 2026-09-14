@@ -29,6 +29,7 @@ Reglas fundamentales:
 14. Si debes explicar un cálculo o recomendación, muestra solo el resultado y una explicación breve y comprensible.
 15. No empieces la respuesta con expresiones como "Here's a thinking process", "Thinking process",
     "Let's analyze", "We need to answer" ni equivalentes.
+16. No escribas tu proceso de razonamiento. Entrega únicamente la respuesta final.
 `.trim();
 
 function buildContext(
@@ -274,8 +275,20 @@ async function generateWithOpenRouter({
     );
   }
 
+  const fallbackModels = [
+    env.aiModel,
+    'nvidia/nemotron-3.5-lightning:free',
+    'inclusionai/ling-3.0-flash-fin:free',
+    'openrouter/free'
+  ].filter(
+    (model, index, list) =>
+      model && list.indexOf(model) === index
+  );
+
   const payload = {
     model: env.aiModel,
+
+    models: fallbackModels,
 
     messages: buildMessages({
       message,
@@ -286,13 +299,12 @@ async function generateWithOpenRouter({
 
     temperature: env.aiTemperature,
 
-    max_tokens: 2048,
+    max_tokens: 4096,
 
     stream: false,
 
     reasoning: {
-      exclude: true,
-      effort: 'low'
+      exclude: true
     }
   };
 
@@ -300,12 +312,15 @@ async function generateWithOpenRouter({
     `${env.aiBaseUrl}/chat/completions`,
     {
       method: 'POST',
+
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${env.openRouterApiKey}`
       },
+
       body: JSON.stringify(payload)
     },
+
     env.aiTimeoutMs
   );
 
