@@ -180,11 +180,31 @@ async function generateWithOpenRouter({
     env.aiTimeoutMs
   );
 
-  const answer = body?.choices?.[0]?.message?.content;
+  const choice = body?.choices?.[0];
+const message = choice?.message;
 
-  if (typeof answer !== 'string' || !answer.trim()) {
-    throw new Error('OpenRouter no devolvió una respuesta válida.');
-  }
+let answer = message?.content;
+
+if (Array.isArray(answer)) {
+  answer = answer
+    .map((part) => {
+      if (typeof part === 'string') return part;
+      if (part?.type === 'text') return part.text ?? '';
+      return '';
+    })
+    .join('');
+}
+
+if (typeof answer !== 'string' || !answer.trim()) {
+  console.error(
+    '[LuzIA Engine] Respuesta inesperada de OpenRouter:',
+    JSON.stringify(body)
+  );
+
+  throw new Error(
+    'OpenRouter no devolvió contenido de texto utilizable.'
+  );
+}
 
   return {
     answer: answer.trim(),
